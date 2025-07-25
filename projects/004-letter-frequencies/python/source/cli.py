@@ -1,4 +1,5 @@
-from .file_manipulate_modules import reading_input, cleaning_input, frequency_analysis, graphic_representation_horizontal
+from .file_manipulate_modules import (reading_input, cleaning_input, frequency_analysis,
+                                      graphic_representation_horizontal)
 from .utility import confirm_operation
 
 
@@ -14,13 +15,12 @@ def main() -> None:
             main()
         else:
             print("Thank you!")
-    except FileNotFoundError as e:
-        print(e)
-        if confirm_operation("Retry?"):
+
+    except (FileNotFoundError, RuntimeError) as e:
+        print(f"Error: {e}")
+        if confirm_operation("Would you like to try again?"):
             main()
         else:
-            main()
-    except RuntimeError as e:
-        print(e)
+            print("Thank you!")
     except Exception as e:
-        print(e)
+        print(f"Fatal error: {e}")
