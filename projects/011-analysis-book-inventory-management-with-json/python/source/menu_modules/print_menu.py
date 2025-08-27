@@ -1,0 +1,11 @@
+def menu() -> None:
+    print("Analysis Book Inventory Management with JSON")
+    print("Option available")
+    print("1. Calculate average rating")
+    print("2. Calculate oldest and newest books")
+    print("3. Calculate genre distribution")
+    print("4. Calculate highly rated books")
+    print("5. Calculate top-rated book")
+    print("6. Calculate genre average rating")
+    print("7. Get a book recommendation")
+    print("0. Back to json selection")
