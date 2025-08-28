@@ -1,4 +1,4 @@
-def menu() -> None:
+def print_menu() -> None:
     print("Analysis Book Inventory Management with JSON")
     print("Option available")
     print("1. Calculate average rating")

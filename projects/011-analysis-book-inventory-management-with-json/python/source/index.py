@@ -12,7 +12,7 @@ from source.data_manipulation_modules.rate_calculation import (
 from source.data_manipulation_modules.recommendation_books import (
     book_recommendation_by_genre, book_recommendation_by_year)
 from source.input_modules.load_json import load_json
-from source.menu_modules.print_menu import menu
+from source.menu_modules.print_menu import print_menu
 
 
 def main() -> None:
@@ -33,7 +33,7 @@ def main() -> None:
             continue
 
         print("Json load succesfully.")
-        menu()
+        print_menu()
 
         while True:
             option: str = input("Select an option: ").strip()

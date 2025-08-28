@@ -1,8 +1,20 @@
 from typing import Any, Dict, List
 
 
-def book_recommendation_by_genre(data: List[Dict[str, Any]]) -> List[Any]:
-    """Based on the user's favorite genre (prompted as input), recommend a book from that genre with a rating above 4.0."""
+def book_recommendation_by_genre(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Recommend books from a user-specified genre with rating above 4.0.
+
+    The user is prompted to enter a preferred genre, and books matching that
+    genre and rating threshold are printed and returned.
+
+    Args:
+        data (List[Dict[str, Any]]): List of books with details
+            (title, author, rating, genre, publication_year, etc.).
+
+    Returns:
+        List[Dict[str, Any]]: List of recommended books from the chosen genre.
+    """
     genre_prefer = input("Insert prefer genre: ").strip().title()
     book_recommend = []
     for book in data:
@@ -16,8 +28,20 @@ def book_recommendation_by_genre(data: List[Dict[str, Any]]) -> List[Any]:
     return book_recommend
 
 
-def book_recommendation_by_year(data: List[Dict[str, Any]]) -> List[Any]:
-    """Prompt the user to enter a year, and then print the titles and authors of books published in or after that year."""
+def book_recommendation_by_year(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Recommend books published in or after a user-specified year with rating above 4.0.
+
+    The user is prompted to enter a year, and books matching the condition
+    are sorted by publication year, printed, and returned.
+
+    Args:
+        data (List[Dict[str, Any]]): List of books with details
+            (title, author, rating, genre, publication_year, etc.).
+
+    Returns:
+        List[Dict[str, Any]]: List of recommended books published after the chosen year.
+    """
     year = int(input("Insert year of publication: "))
     books_by_year = []
     for book in data:
@@ -25,7 +49,6 @@ def book_recommendation_by_year(data: List[Dict[str, Any]]) -> List[Any]:
             books_by_year.append(book)
     print(f"title of book publicate after {year}:")
     books_by_year = sorted(books_by_year, key=lambda x: x["publication_year"])
-    print(books_by_year)
     for book in books_by_year:
         print(
             f"Title: {book['title']}\nAuthor: {book['author']}\nYear: {book['publication_year']}\n"
