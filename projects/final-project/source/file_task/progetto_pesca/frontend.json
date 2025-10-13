@@ -1,0 +1,18 @@
+[
+  {
+
+  "name": "define ui design",
+  "description": "create and define the ui design",
+  "priority": "high",
+  "due_date": "20-10-2025",
+  "completed": false
+},
+  {
+    "name": "stack for frontend",
+    "description": "define stack technology for frontend",
+    "priority": "medium",
+    "due_date": "25-10-2025",
+    "completed": false
+  }
+
+]

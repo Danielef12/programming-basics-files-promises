@@ -1,0 +1,9 @@
+[
+  {
+    "name": "framework",
+    "description": "scegliere il framework di sviluppo",
+    "priority": "low",
+    "due_date": "15/10/2025",
+    "completed": false
+  }
+]
